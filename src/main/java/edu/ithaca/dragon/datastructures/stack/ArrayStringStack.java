@@ -4,6 +4,7 @@ import java.util.NoSuchElementException;
 public class ArrayStringStack implements StringStack{
 
     private String[] myArray;
+    private int size =5;
     private int index =0;
 
     public ArrayStringStack(){
@@ -18,15 +19,20 @@ public class ArrayStringStack implements StringStack{
     }
 
     @Override
-    public String pop() throws NoSuchElementException{
+    public String pop(){
         // TODO Auto-generated method stub
-        String value = myArray[index-1];
-        index --;
-        return value;
+        if (index ==0 || index> size){
+            throw new NoSuchElementException("List is empty");
+        }
+        else{
+            String value = myArray[index-1];
+            index --;
+            return value;
+        }
     }
 
     @Override
-    public boolean isEmpty() throws NoSuchElementException {
+    public boolean isEmpty(){
         // TODO Auto-generated method stub
         if( index ==0){
             return true;
@@ -38,7 +44,7 @@ public class ArrayStringStack implements StringStack{
     }
 
     @Override
-    public void makeEmpty() throws NoSuchElementException{
+    public void makeEmpty(){
         // TODO Auto-generated method stub
         for (int i= index; i>= 0; i--){
             index --;
