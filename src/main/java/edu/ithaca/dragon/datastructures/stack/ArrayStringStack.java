@@ -8,7 +8,7 @@ public class ArrayStringStack implements StringStack{
     private int index =0;
 
     public ArrayStringStack(){
-        myArray = new String[5];
+        myArray = new String[size];
     }
     
     @Override
