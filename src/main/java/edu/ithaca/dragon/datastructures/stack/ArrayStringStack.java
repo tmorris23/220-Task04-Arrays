@@ -34,7 +34,7 @@ public class ArrayStringStack implements StringStack{
     @Override
     public boolean isEmpty(){
         // TODO Auto-generated method stub
-        if( index ==0){
+        if( index <=0){
             return true;
         }
 
@@ -46,9 +46,8 @@ public class ArrayStringStack implements StringStack{
     @Override
     public void makeEmpty(){
         // TODO Auto-generated method stub
-        for (int i= index; i>= 0; i--){
-            index --;
-        }
+        index=0;
+        
         
     }
     
