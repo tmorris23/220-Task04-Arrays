@@ -1,4 +1,5 @@
 package edu.ithaca.dragon.datastructures.stack;
+import java.util.NoSuchElementException;
 
 public class ArrayStringStack implements StringStack{
 
@@ -20,19 +21,28 @@ public class ArrayStringStack implements StringStack{
     @Override
     public String pop() {
         // TODO Auto-generated method stub
-        
+        index --;
         return null;
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty() throws NoSuchElementException {
         // TODO Auto-generated method stub
-        return false;
+        if( index ==0){
+            return true;
+        }
+
+        else{
+            return false;
+        }
     }
 
     @Override
     public void makeEmpty() {
         // TODO Auto-generated method stub
+        for (int i= index; i>= 0; i--){
+            index --;
+        }
         
     }
     
