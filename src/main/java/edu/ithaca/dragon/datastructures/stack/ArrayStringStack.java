@@ -4,7 +4,6 @@ import java.util.NoSuchElementException;
 public class ArrayStringStack implements StringStack{
 
     private String[] myArray;
-    private int size = 5;
     private int index =0;
 
     public ArrayStringStack(){
@@ -19,9 +18,9 @@ public class ArrayStringStack implements StringStack{
     }
 
     @Override
-    public String pop() {
+    public String pop() throws NoSuchElementException{
         // TODO Auto-generated method stub
-        String value = myArray[index];
+        String value = myArray[index-1];
         index --;
         return value;
     }
@@ -39,7 +38,7 @@ public class ArrayStringStack implements StringStack{
     }
 
     @Override
-    public void makeEmpty() {
+    public void makeEmpty() throws NoSuchElementException{
         // TODO Auto-generated method stub
         for (int i= index; i>= 0; i--){
             index --;
