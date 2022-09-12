@@ -21,8 +21,9 @@ public class ArrayStringStack implements StringStack{
     @Override
     public String pop() {
         // TODO Auto-generated method stub
+        String value = myArray[index];
         index --;
-        return null;
+        return value;
     }
 
     @Override
