@@ -10,13 +10,17 @@ import edu.ithaca.dragon.datastructures.stack.ArrayStringStack;
 
 public class ArrayUtilTest {
 
-    int numItemsToTestWith = 5;
-    String[] myArray = {
-        "0","1","2","3","4"
-    };
-
     @Test
-    public void createDoubleSizeArrayTest( String[] myStack, int stackSize){
+        public void testDouble(){
+
+        int numItemsToTestWith = 5;
+        String[] myArray = {
+            "0","1","2","3","4"
+        };
+        createDoubleSizeArrayTest(myArray);
+}
+    @Test
+    public void createDoubleSizeArrayTest( String[] myStack){
         assertEquals(5,myStack.length); //ensuring that the stack just created is empty
 
         ArrayStringStack doubleArray = new ArrayStringStack();
