@@ -17,17 +17,11 @@ public class ArrayUtilTest {
     public ArrayStringStack createDoubleSizeArrayTest(ArrayStringStack myStack, int stackSize){
         assertTrue(myStack.isEmpty()); //ensuring that the stack just created is empty
         ArrayStringStack doubleArray = new ArrayStringStack();
+        doubleArray = createDoubleSizeArray(myStack);
         
-        for (int i=0; i<stackSize; i++){ //using a for loop to push values into the stack
-            myStack.push(Integer.toString(i));
-            doubleArray.push(Integer.toString(i));
-            assertFalse(myStack.isEmpty());
-        }
-
-        for (int i=stackSize; i<(stackSize*2); i++){
-            doubleArray.push(Integer.toString(i));
-        }
-        return doubleArray;
+        assertFalse(doubleArray.isEmpty());
+        assertEquals(10,doubleArray.size);
+        
     }
     
 }
