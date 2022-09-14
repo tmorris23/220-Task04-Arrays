@@ -48,8 +48,10 @@ public class ArrayStringStack implements StringStack{
         // TODO Auto-generated method stub
         index=0;
         
-        
     }
     
+    public int getSize(){
+        return size;
+    }
     
 }
