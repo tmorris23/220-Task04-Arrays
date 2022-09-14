@@ -13,7 +13,6 @@ public class ArrayUtilTest {
     @Test
         public void testDouble(){
 
-        int numItemsToTestWith = 5;
         String[] myArray = {
             "0","1","2","3","4"
         };
@@ -27,7 +26,7 @@ public class ArrayUtilTest {
         ArrayUtil.createDoubleSizeArray(myStack);
         
         assertFalse(doubleArray.isEmpty());
-        assertEquals(10,doubleArray.getSize());
+        assertEquals(8,doubleArray.getSize());
         
     }
     
