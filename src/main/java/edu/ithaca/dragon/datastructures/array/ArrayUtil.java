@@ -3,6 +3,7 @@ package edu.ithaca.dragon.datastructures.array;
 import edu.ithaca.dragon.datastructures.stack.ArrayStringStack;
 
 public class ArrayUtil {
+
     
     /**
      * @param arrayToDouble an array that you want a bigger copy of
@@ -10,7 +11,7 @@ public class ArrayUtil {
      */
     public static ArrayStringStack createDoubleSizeArray(String[] arrayToDouble){
 
-         ArrayStringStack doubleArray = new ArrayStringStack();
+        ArrayStringStack doubleArray = new ArrayStringStack();
 
         for (int i=0; i<arrayToDouble.length; i++){ //using a for loop to push values into the stack
             doubleArray.push(Integer.toString(i));
